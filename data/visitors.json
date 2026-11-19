@@ -1,0 +1,72 @@
+[
+  {
+    "id": "abc84f9b-7d29-4fd6-8b7e-690848c07df6",
+    "created_at": "2026-11-19T19:58:08.872Z",
+    "full_name": "Mokhtar Aldafini",
+    "phone": "96772010203",
+    "email": "mokhtarrdafinir@gmail.com",
+    "ticket_category": "كبار الشخصيات",
+    "quantity": 4,
+    "estimated_total": 1600,
+    "status": "pending",
+    "notes": "زائر مسجل سابقاً (ID: 437a6563-d1c0-43a1-b909-0f280a246f4d)",
+    "ip_address": "::1",
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36"
+  },
+  {
+    "id": "437a6563-d1c0-43a1-b909-0f280a246f4d",
+    "created_at": "2026-11-19T19:18:19.849Z",
+    "full_name": "Mokhtar Aldafini",
+    "phone": "96772010203",
+    "email": "mokhtarrdafinir@gmail.com",
+    "ticket_category": "كبار الشخصيات",
+    "quantity": 4,
+    "estimated_total": 1600,
+    "status": "confirmed",
+    "notes": "زائر مسجل سابقاً (ID: 374df9df-28e9-466d-bfa9-d06e89d3c7ae)",
+    "ip_address": "::1",
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36"
+  },
+  {
+    "id": "374df9df-28e9-466d-bfa9-d06e89d3c7ae",
+    "created_at": "2026-11-19T18:55:28.584Z",
+    "full_name": "Mokhtar Aldafini",
+    "phone": "96772010203",
+    "email": "mokhtarrdafinir@gmail.com",
+    "ticket_category": "عادية",
+    "quantity": 1,
+    "estimated_total": 150,
+    "status": "pending",
+    "notes": null,
+    "ip_address": "::1",
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36"
+  },
+  {
+    "id": "d036cc3c-ab44-4ddd-9198-7f854ebd0e7b",
+    "created_at": "2026-11-19T18:46:34.371Z",
+    "full_name": "سارة العتيبي",
+    "phone": "0551234567",
+    "email": "sara.otaibi@example.com",
+    "ticket_category": "مميزة",
+    "quantity": 1,
+    "estimated_total": 250,
+    "status": "pending",
+    "notes": "زائر مسجل سابقاً (ID: b79b2cee-5cbc-4e94-9c08-4dddeb175b45)",
+    "ip_address": "::1",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.26100.9818"
+  },
+  {
+    "id": "b79b2cee-5cbc-4e94-9c08-4dddeb175b45",
+    "created_at": "2026-11-19T18:45:08.694Z",
+    "full_name": "سارة العتيبي",
+    "phone": "0551234567",
+    "email": "sara.otaibi@example.com",
+    "ticket_category": "كبار الشخصيات",
+    "quantity": 2,
+    "estimated_total": 800,
+    "status": "pending",
+    "notes": null,
+    "ip_address": "::1",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.26100.9818"
+  }
+]
