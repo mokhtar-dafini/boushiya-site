@@ -1,25 +1,36 @@
-@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Tajawal:wght@300;400;500;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap');
 
 /* ==========================================================================
-   الخط الأساسي للموقع: my font.otf (thmanyahseriftext-Medium)
+   الخط الأساسي للموقع: thmanyahseriftext-Regular.otf
    ========================================================================== */
+@font-face {
+  font-family: "thmanyahseriftext-Regular";
+  src:
+    local("thmanyahseriftext-Regular"),
+    local("thmanyah serif text Regular"),
+    local("thmanyah serif text"),
+    url("/font/thmanyahseriftext-Regular.otf") format("opentype"),
+    url("/fonts/thmanyahseriftext-Regular.otf") format("opentype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 @font-face {
   font-family: "thmanyahseriftext-Medium";
   src:
     local("thmanyahseriftext-Medium"),
     local("thmanyah serif text Medium"),
-    local("thmanyah serif text MedRegular"),
-    local("thmanyah serif text"),
-    url("/fonts/my font.otf") format("opentype"),
-    url("/fonts/thmanyahseriftext-Medium.otf") format("opentype"),
-    url("/my font.otf") format("opentype");
+    local("thmanyahseriftext-Regular"),
+    url("/font/thmanyahseriftext-Regular.otf") format("opentype"),
+    url("/fonts/thmanyahseriftext-Regular.otf") format("opentype");
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
 }
 
     :root {
-      --font-only: "thmanyahseriftext-Medium", "Amiri", "Tajawal", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-only: "thmanyahseriftext-Regular", "thmanyahseriftext-Medium", "Tajawal", "Amiri", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 
       --bg-obsidian: #070504;
       --text-primary: #fffaf3;
