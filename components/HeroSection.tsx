@@ -36,17 +36,6 @@ export default function HeroSection() {
             <a className="text-link glass-box spotlight-card pop-card" href="#details">اكتشف التفاصيل ↓</a>
           </div>
         </div>
-
-        {/* الصورة بجانب النص بأعلى الصفحة */}
-        <div className="hero-visual reveal is-visible">
-          <div className="hero-visual-card glass-box spotlight-card pop-card">
-            <img
-              src="/boushiyaImage.png"
-              alt="حفل البوشية - هيبة الذهب"
-              className="hero-visual-img"
-            />
-          </div>
-        </div>
       </div>
     </section>
   );
