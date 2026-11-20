@@ -10,8 +10,8 @@ export default function HeroSection() {
           <img
             id="concert-hero-image"
             className="hero-bg-photo"
-            src="/hero-image.svg"
-            alt="أجواء حفل البوشية التراثية"
+            src="/boushiyaImage.png"
+            alt="خلفية حفل البوشية التراثية"
           />
         </div>
         <div className="hero-spotlight"></div>
@@ -34,6 +34,17 @@ export default function HeroSection() {
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
             </a>
             <a className="text-link glass-box spotlight-card pop-card" href="#details">اكتشف التفاصيل ↓</a>
+          </div>
+        </div>
+
+        {/* الصورة بجانب النص بأعلى الصفحة */}
+        <div className="hero-visual reveal is-visible">
+          <div className="hero-visual-card glass-box spotlight-card pop-card">
+            <img
+              src="/boushiyaImage.png"
+              alt="حفل البوشية - هيبة الذهب"
+              className="hero-visual-img"
+            />
           </div>
         </div>
       </div>

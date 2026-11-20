@@ -26,6 +26,10 @@ yarn-error.log*
 .env*.local
 .env
 
+# root media copies
+/boushiyaImage.png
+/song.mp4
+
 # vercel
 .vercel
 

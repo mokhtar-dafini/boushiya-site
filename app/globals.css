@@ -338,8 +338,46 @@
       z-index: 2;
       width: 100%;
       display: flex;
-      justify-content: flex-start;
+      justify-content: space-between;
       align-items: center;
+      gap: 36px;
+    }
+
+    .hero-visual {
+      flex: 1 1 480px;
+      max-width: 540px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: heroReveal 0.95s var(--ease-out-quart) forwards;
+    }
+
+    .hero-visual-card {
+      position: relative;
+      width: 100%;
+      border-radius: 24px;
+      overflow: hidden;
+      border: 1px solid rgba(245, 187, 103, 0.4);
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.75), 0 0 35px rgba(245, 187, 103, 0.18);
+      background: rgba(20, 14, 10, 0.55);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+    }
+
+    .hero-visual-card:hover {
+      transform: translateY(-6px) scale(1.015);
+      border-color: rgba(245, 187, 103, 0.75);
+      box-shadow: 0 35px 80px rgba(0, 0, 0, 0.88), 0 0 50px rgba(245, 187, 103, 0.3);
+    }
+
+    .hero-visual-img {
+      width: 100%;
+      height: auto;
+      max-height: 440px;
+      display: block;
+      object-fit: cover;
+      border-radius: 23px;
     }
 
     .hero-copy {
@@ -1461,6 +1499,27 @@
        Responsive Breakpoints — Much Smaller & Centered on Mobile Only
        ========================================================================== */
     @media (max-width: 860px) {
+      .hero-inner {
+        flex-direction: column-reverse;
+        justify-content: center;
+        text-align: center;
+        gap: 24px;
+      }
+      .hero-copy {
+        max-width: 100%;
+        text-align: center;
+        align-items: center;
+      }
+      .hero-actions {
+        justify-content: center;
+      }
+      .hero-visual {
+        max-width: 100%;
+        width: 100%;
+      }
+      .hero-visual-img {
+        max-height: 280px;
+      }
       .hero-bg-photo {
         object-position: 28% center;
       }

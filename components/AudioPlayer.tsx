@@ -81,11 +81,14 @@ export default function AudioPlayer({ onPlayingChange }: AudioPlayerProps) {
 
     if (!isPlaying) {
       try {
+        if (!audio.src || audio.src === '' || audio.src.endsWith('/')) {
+          audio.src = '/song.mp4';
+        }
         await audio.play();
         setIsPlaying(true);
         onPlayingChange?.(true);
       } catch (err) {
-        // إذا فشل التشغيل لعدم وجود ملف صوتي محلي، نفتح منتقي الملفات
+        // Fallback to manual file picker if browser blocks autoplay or format
         filePickerRef.current?.click();
       }
     } else {
@@ -167,6 +170,15 @@ export default function AudioPlayer({ onPlayingChange }: AudioPlayerProps) {
     }
   };
 
+  // حلقة تكرار دائمة (Loop) حتى يوقفها الزائر بنفسه
+  const onEnded = () => {
+    const audio = audioRef.current;
+    if (audio && isPlaying) {
+      audio.currentTime = 0;
+      audio.play().catch(() => {});
+    }
+  };
+
   return (
     <section className="shell music-orb-section reveal is-visible" aria-label="مشغل أغنية حفل البوشية">
       <div
@@ -220,25 +232,29 @@ export default function AudioPlayer({ onPlayingChange }: AudioPlayerProps) {
 
         <div className="music-orb-caption">
           <span className="music-status-dot" aria-hidden="true"></span>
-          <span id="music-orb-label">{isPlaying ? 'أغنيـة البُوشيــة (جارٍ التشغيل)' : 'استمعي إلى أغنيـة البُوشيـة'}</span>
+          <span id="music-orb-label">{isPlaying ? 'أغنيـة البُوشيــة (جارٍ التشغيل والتكرار)' : 'استمعي إلى أغنيـة البُوشيـة'}</span>
           <span className="music-time-badge" id="music-time-badge" dir="ltr">{timeText}</span>
         </div>
 
         <audio
           ref={audioRef}
           id="evening-audio"
+          src="/song.mp4"
           preload="auto"
           loop
           onTimeUpdate={onTimeUpdate}
           onLoadedMetadata={onLoadedMetadata}
+          onEnded={onEnded}
           onPlay={() => { setIsPlaying(true); onPlayingChange?.(true); }}
           onPause={() => { setIsPlaying(false); onPlayingChange?.(false); }}
         >
+          <source src="/song.mp4" type="audio/mp4" />
+          <source src="/song.mp4" type="video/mp4" />
           <source src="/song.mp3" type="audio/mpeg" />
           <source src="/أغنية البوشية.m4a" type="audio/mp4" />
           <source src="/boushiya.mp3" type="audio/mpeg" />
         </audio>
-        <input ref={filePickerRef} type="file" id="audio-file-picker" accept="audio/*" hidden onChange={handleFileChange} />
+        <input ref={filePickerRef} type="file" id="audio-file-picker" accept="audio/*,video/*" hidden onChange={handleFileChange} />
       </div>
     </section>
   );
