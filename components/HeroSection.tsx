@@ -20,8 +20,8 @@ export default function HeroSection() {
       <div className="shell hero-inner">
         <div className="hero-copy">
           <h1 id="hero-title">
-            <span className="hero-title-main">البُوشيًّــــة..</span>
-            <span className="hero-title-sub">هيِبــة الذهـب</span>
+            <span className="hero-title-main">ليلــة</span>
+            <span className="hero-title-sub">البُوشيًّــــة..</span>
           </h1>
 
           <p className="hero-desc">
